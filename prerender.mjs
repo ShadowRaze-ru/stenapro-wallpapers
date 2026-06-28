@@ -18,14 +18,16 @@ async function prerender() {
   })
 
   await new Promise((resolve) => {
-    server.stdout.on('data', (data) => {
+    const onData = (data) => {
       const msg = data.toString()
-      if (msg.includes('localhost')) {
+      console.log('[prerender] server:', msg)
+      if (msg.includes('localhost') || msg.includes('3033')) {
         console.log('[prerender] Server is up!')
         resolve()
       }
-    })
-    server.stderr.on('data', (data) => console.error(data.toString()))
+    }
+    server.stdout.on('data', onData)
+    server.stderr.on('data', onData)
   })
 
   await sleep(1000)

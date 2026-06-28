@@ -120,12 +120,22 @@
         </div>
         <div class="sp-container sp-hero-inner">
           <div class="sp-hero-left">
-            <div class="sp-hero-badge sp-hero-anim" style="--hi: 0">РАБОТАЕМ В МОСКВЕ И МО</div>
+            <div class="sp-hero-badges sp-hero-anim" style="--hi: 0">
+              <div class="sp-hero-badge">РАБОТАЕМ В МОСКВЕ И МО</div>
+              <div class="sp-installments-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"
+                  aria-hidden="true">
+                  <rect x="2" y="5" width="20" height="14" rx="2" />
+                  <line x1="2" y1="10" x2="22" y2="10" />
+                </svg>
+                МОЖНО ОПЛАЧИВАТЬ ЧАСТЯМИ
+              </div>
+            </div>
             <h1 class="sp-hero-anim" style="--hi: 1">Профессиональная покраска и поклейка обоев <span class="sp-blue">в
                 Москве и Московской области</span></h1>
             <p class="sp-hero-sub sp-hero-anim" style="--hi: 2" itemprop="description">Быстро, чисто, аккуратно, с
               гарантией качества</p>
-            <div class="sp-hero-btns sp-hero-anim" style="--hi: 3">
+            <div class="sp-hero-btns sp-hero-anim" style="--hi: 4">
               <button @click="scrollTo('#contact')" class="sp-btn-hero-primary">Получить коммерческое предложение
                 →</button>
               <button @click="openQuickModal()" class="sp-btn-hero-outline">Узнать стоимость</button>
@@ -252,6 +262,14 @@
           <div class="sp-container-text sp-animate sp-fade-up">
             <h2 id="cost-title">Прозрачные цены за м²</h2>
             <p class="sp-sec-sub">Никаких скрытых наценок. Фиксируем стоимость в договоре до начала работ.</p>
+            <div class="sp-installments-inline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"
+                aria-hidden="true">
+                <rect x="2" y="5" width="20" height="14" rx="2" />
+                <line x1="2" y1="10" x2="22" y2="10" />
+              </svg>
+              Можно оплачивать частями
+            </div>
           </div>
           <div class="sp-prices">
             <div class="sp-price-card sp-animate sp-fade-up" :style="{ '--delay': i * 100 + 'ms' }"
@@ -1402,7 +1420,7 @@ html {
 .sp-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://s10.iimage.su/s/19/gdVW4oyxMMMRyopr0JrPU72ehIW48VW76tBOydnNT.jpg');
+  background-image: url('https://s6.iimage.su/s/28/gt8ViCQxGchQlV1KvMC5glLeGV1iqjmp1SNcJramH.webp');
   background-size: cover;
   background-position: center 30%;
 }
@@ -1429,14 +1447,14 @@ html {
   align-items: center;
   border: 1.5px solid rgba(255, 255, 255, .4);
   color: rgba(255, 255, 255, .92) !important;
-  padding: 5px 14px;
+  padding: 10px 14px;
   border-radius: 4px;
   font-size: .68rem;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif !important;
   letter-spacing: .1em;
   text-transform: uppercase;
-  margin-bottom: 22px;
+  line-height: 1;
 }
 
 .sp-hero-left h1 {
@@ -1509,6 +1527,47 @@ html {
   background: rgba(255, 255, 255, .12) !important;
   border-color: #fff;
   color: #fff !important;
+}
+
+/* Плашка «Можно оплачивать частями» в hero */
+.sp-hero-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.sp-installments-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: rgba(34, 197, 94, .18);
+  border: 1.5px solid rgba(34, 197, 94, .5);
+  border-radius: 4px;
+  color: #86efac;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Плашка «Можно оплачивать частями» в секции цен */
+.sp-installments-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 12px;
+  padding: 7px 14px;
+  background: #f0fdf4;
+  border: 1.5px solid #86efac;
+  border-radius: 40px;
+  color: #16a34a;
+  font-size: .82rem;
+  font-weight: 600;
 }
 
 .sp-promo-card {
