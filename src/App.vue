@@ -234,7 +234,7 @@
               </p>
             </div>
             <div class="sp-mat-img">
-              <img src="https://s10.iimage.su/s/19/gdzEhw3xWacDfvzSTCLPlsMBU3UtSbWdwY8Uf93zz.jpg" loading="lazy"
+              <img src="https://s6.iimage.su/s/07/th_gdx2vRWxp5nvnjzc1lHHWrAQ2n58rYPG5S7pwSAfK.webp" loading="lazy"
                 width="600" height="320" />
               <div class="sp-mat-price-overlay">от 300 ₽/м²</div>
             </div>
@@ -1420,7 +1420,7 @@ html {
 .sp-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://s6.iimage.su/s/28/gt8ViCQxGchQlV1KvMC5glLeGV1iqjmp1SNcJramH.webp');
+  background-image: url('https://s6.iimage.su/s/07/th_gilEfj8xXiY2oHjypdF3Y70Wykd9Wof6hZvP0igiH.webp');
   background-size: cover;
   background-position: center 30%;
 }
