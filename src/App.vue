@@ -208,7 +208,7 @@
               </p>
             </div>
             <div class="sp-mat-img">
-              <img src="https://s10.iimage.su/s/19/gneubduxdeVKFLZk5v0tJ6FFA62Nf5z6Z5Ay043TF.jpg" loading="lazy"
+              <img src="https://s6.iimage.su/s/18/gkqrBPTx3L2rrEIrgFzpi0m8nzqY9a0YZwMcVkrSv.jpg" loading="lazy"
                 width="600" height="320" />
               <div class="sp-mat-price-overlay">от 250 ₽/м²</div>
             </div>
