@@ -64,7 +64,7 @@
         </nav>
         <div class="sp-hcta">
           <div class="sp-phone-wrap">
-            <a href="tel:+79252753031" class="sp-phone" itemprop="telephone">+7 (925) 275-30-31</a>
+            <a href="tel:+79252753031" class="sp-phone" itemprop="telephone" @click="trackPhoneClick">+7 (925) 275-30-31</a>
             <span class="sp-working"><span class="sp-dot"></span>Работаем сейчас</span>
           </div>
           <a href="https://t.me/Stena_pro" target="_blank" rel="noopener noreferrer" class="sp-btn-wa"
@@ -90,10 +90,11 @@
         </button>
       </div>
       <div id="sp-mobile-menu" class="sp-mmenu" :class="{ open: menuOpen }" role="navigation">
+        <a href="#why" @click="menuOpen = false">Технология</a>
         <a href="#process" @click="menuOpen = false">Этапы</a>
         <a href="#cost" @click="menuOpen = false">Цены</a>
         <a href="#reviews" @click="menuOpen = false">Отзывы</a>
-        <a href="tel:+79252753031" class="sp-phone-mob">+7 (925) 275-30-31</a>
+        <a href="tel:+79252753031" class="sp-phone-mob" @click="trackPhoneClick">+7 (925) 275-30-31</a>
         <a href="https://t.me/Stena_pro" target="_blank" rel="noopener noreferrer" class="sp-btn-wa sp-btn-wa-mob">
           <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
             <path
@@ -175,7 +176,7 @@
           </svg>
         </a>
       </section>
-      <section class="sp-sec sp-sec-pattern" aria-labelledby="materials-title">
+      <section id="why" class="sp-sec sp-sec-pattern" aria-labelledby="materials-title">
         <div class="sp-container">
           <div class="sp-mat-header">
             <h2 id="materials-title" class="sp-mat-title">С чем мы <span class="sp-blue-dark">работаем</span></h2>
@@ -547,7 +548,7 @@
           </div>
           <p>Профессиональная покраска и поклейка обоев с гарантией качества.</p>
           <div class="sp-footer-messengers">
-            <a href="tel:+79252753031" class="sp-messenger-icon" title="Позвонить" aria-label="Позвонить нам">
+            <a href="tel:+79252753031" class="sp-messenger-icon" title="Позвонить" aria-label="Позвонить нам" @click="trackPhoneClick">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
                 <path
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.59 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.76a16 16 0 0 0 6 6l1.27-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z" />
@@ -584,7 +585,7 @@
                 </svg>
               </span>
               <div>
-                <a href="tel:+79252753031" class="sp-contact-phone" itemprop="telephone">+7 (925) 275-30-31</a>
+                <a href="tel:+79252753031" class="sp-contact-phone" itemprop="telephone" @click="trackPhoneClick">+7 (925) 275-30-31</a>
                 <small>Ежедневно с 9:00 до 21:00</small>
               </div>
             </li>
@@ -638,6 +639,12 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
+
+const trackPhoneClick = () => {
+  if (typeof window !== 'undefined' && typeof window.ym === 'function') {
+    window.ym(108671609, 'reachGoal', 'phone_click')
+  }
+}
 
 const isScrolled = ref(false)
 const menuOpen = ref(false)
