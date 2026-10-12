@@ -53,7 +53,7 @@
           <img src="https://stena-pro.vercel.app/logo.jpg" alt="СтеныПро" itemprop="logo" width="42" height="42" />
           <div>
             <span class="sp-logo-title">СТЕНЫ<span class="sp-text-blue">ПРО</span></span>
-            <span class="sp-logo-sub">Покраска и поклейка обоев<br>под ключ</span>
+            <span class="sp-logo-sub">Поклейка и покраска обоев<br>под ключ</span>
           </div>
         </div>
         <nav class="sp-nav" aria-label="Основная навигация">
@@ -132,7 +132,7 @@
                 МОЖНО ОПЛАЧИВАТЬ ЧАСТЯМИ
               </div>
             </div>
-            <h1 class="sp-hero-anim" style="--hi: 1">Профессиональная покраска и поклейка обоев <span class="sp-blue">в
+            <h1 class="sp-hero-anim" style="--hi: 1">Профессиональная поклейка и покраска обоев <span class="sp-blue">в
                 Москве и Московской области</span></h1>
             <p class="sp-hero-sub sp-hero-anim" style="--hi: 2" itemprop="description">Быстро, чисто, аккуратно, с
               гарантией качества</p>
@@ -153,7 +153,7 @@
                 </div>
                 <div>
                   <div class="sp-promo-title">Акция — скидка 10%</div>
-                  <div class="sp-promo-text">При заказе покраски или поклейки обоев больше <strong>300 м²</strong> —
+                  <div class="sp-promo-text">При заказе поклейки или покраски обоев больше <strong>300 м²</strong> —
                     скидка
                     <strong>10%</strong> на работу.<br>Осталось <strong style="color:#fbbf24">5 мест</strong> в этом
                     месяце!
@@ -181,13 +181,13 @@
           <div class="sp-mat-header">
             <h2 id="materials-title" class="sp-mat-title">С чем мы <span class="sp-blue-dark">работаем</span></h2>
             <div class="sp-tabs" role="tablist" aria-label="Выбор материала">
-              <button role="tab" :aria-selected="activeTab === 'gas'" :class="{ active: activeTab === 'gas' }"
-                @click="activeTab = 'gas'">Покраска обоев</button>
               <button role="tab" :aria-selected="activeTab === 'pgp'" :class="{ active: activeTab === 'pgp' }"
-                @click="activeTab = 'pgp'">Поклейка обоев</button>
+                @click="activeTab = 'pgp'">Покраска обоев</button>
+              <button role="tab" :aria-selected="activeTab === 'gas'" :class="{ active: activeTab === 'gas' }"
+                @click="activeTab = 'gas'">Поклейка обоев</button>
             </div>
           </div>
-          <div class="sp-mat-card sp-animate sp-fade-up" v-if="activeTab === 'gas'" role="tabpanel">
+          <div class="sp-mat-card sp-animate sp-fade-up" v-if="activeTab === 'pgp'" role="tabpanel">
             <div class="sp-mat-text">
               <h3>Обои под покраску (флизелин, стеклохолст)</h3>
               <p> Специальные обои с рельефной поверхностью, которые красятся в любой цвет. Позволяют обновить интерьер
@@ -209,12 +209,12 @@
               </p>
             </div>
             <div class="sp-mat-img">
-              <img src="https://s6.iimage.su/s/18/gkqrBPTx3L2rrEIrgFzpi0m8nzqY9a0YZwMcVkrSv.jpg" loading="lazy"
+              <img src="https://s6.iimage.su/s/26/th_gAJbucbxwe5L63DylaFNVgAXvaM3dy8HVR0LU1jSE.jpg" loading="lazy"
                 width="600" height="320" />
               <div class="sp-mat-price-overlay">от 250 ₽/м²</div>
             </div>
           </div>
-          <div class="sp-mat-card sp-animate sp-fade-up" v-if="activeTab === 'pgp'" role="tabpanel">
+          <div class="sp-mat-card sp-animate sp-fade-up" v-if="activeTab === 'gas'" role="tabpanel">
             <div class="sp-mat-text">
               <h3>Виниловые, флизелиновые, бумажные обои</h3>
               <p>Профессиональная поклейка любых видов обоев. Тщательная подготовка стен и точная подгонка рисунка
@@ -235,7 +235,7 @@
               </p>
             </div>
             <div class="sp-mat-img">
-              <img src="https://s6.iimage.su/s/07/th_gdx2vRWxp5nvnjzc1lHHWrAQ2n58rYPG5S7pwSAfK.webp" loading="lazy"
+              <img src="https://s6.iimage.su/s/26/th_gpCAExExJl9HrTDnlBH2CycOmHjVY9bL9mznzvwRs.webp" loading="lazy"
                 width="600" height="320" />
               <div class="sp-mat-price-overlay">от 300 ₽/м²</div>
             </div>
@@ -613,7 +613,7 @@
               <address style="font-style:normal" itemprop="address" itemscope
                 itemtype="https://schema.org/PostalAddress">
                 <span itemprop="addressLocality">г. Москва</span>, <span itemprop="streetAddress">ул. Интернациональная
-                  2, корп. 1, кв. 178</span>
+                  2, корп. 1, кв. 177</span>
               </address>
             </li>
           </ul>
@@ -648,7 +648,7 @@ const trackPhoneClick = () => {
 
 const isScrolled = ref(false)
 const menuOpen = ref(false)
-const activeTab = ref('gas')
+const activeTab = ref('pgp')
 const activeFaq = ref(null)
 const isSubmitting = ref(false)
 const formMessage = ref('')
@@ -855,7 +855,7 @@ const steps = [
     badge: null
   },
   {
-    title: 'Покраска или поклейка обоев',
+    title: 'Поклейка или покраска обоев',
     desc: 'Бригада выполняет работы за 1–3 дня в зависимости от объёма. Соблюдаем режим тишины и чистоту в подъезде.',
     badge: null
   },
@@ -867,8 +867,8 @@ const steps = [
 ]
 
 const prices = [
-  { title: 'Покраска обоев', price: 'от 250 ₽ / м²', features: ['Подготовка поверхности', 'Грунтовка стен', 'Нанесение краски', 'Финишная проверка покрытия'], popular: true },
   { title: 'Поклейка обоев', price: 'от 300 ₽ / м²', features: ['Грунтовка', 'Нанесение клея', 'Поклейка полотен встык', 'Подгонка рисунка по раппорту'], popular: true },
+  { title: 'Покраска обоев', price: 'от 250 ₽ / м²', features: ['Подготовка поверхности', 'Грунтовка стен', 'Нанесение краски', 'Финишная проверка покрытия'], popular: true },
   { title: 'Дополнительные работы', subtitle: 'оговаривается отдельно', price: 'от 300 ₽', features: ['повесить люстры', 'Повесить карнизы', 'замена плинтусов', 'замена сантехники'], popular: false }
 ]
 
@@ -1427,7 +1427,7 @@ html {
 .sp-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://s6.iimage.su/s/07/th_gilEfj8xXiY2oHjypdF3Y70Wykd9Wof6hZvP0igiH.webp');
+  background-image: url('https://s6.iimage.su/s/26/th_g69oLfSxvS3tQpNXSjKa7rQKURpij7QNZbfhl2l8Q.webp');
   background-size: cover;
   background-position: center 30%;
 }
